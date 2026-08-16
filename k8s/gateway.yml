@@ -13,8 +13,7 @@ kind: Gateway
 metadata:
   name: bankapp-gateway
   namespace: bankapp
-    # annotations:
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+  
 spec:
   gatewayClassName: envoy-gateway
   listeners:
