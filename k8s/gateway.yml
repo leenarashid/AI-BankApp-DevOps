@@ -13,14 +13,11 @@ kind: Gateway
 metadata:
   name: bankapp-gateway
   namespace: bankapp
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    # annotations:
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   gatewayClassName: envoy-gateway
   listeners:
-    # HTTP — needed for cert-manager ACME HTTP-01 challenge validation.
-    # cert-manager creates a temporary HTTPRoute in its own namespace to serve
-    # the challenge, so allowedRoutes must permit all namespaces.
     - name: http
       protocol: HTTP
       port: 80
