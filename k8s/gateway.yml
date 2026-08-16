@@ -27,14 +27,7 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
-    # HTTPS — TLS terminated at Envoy Gateway using cert-manager certificate
-    - name: https
-      protocol: HTTPS
-      port: 443
-      hostname: 52.43.73.130.nip.io
-      allowedRoutes:
-        namespaces:
-          from: Same
+    
 ---
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
